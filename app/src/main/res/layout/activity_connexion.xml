@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,151 +7,82 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:gravity="center"
+        android:padding="25dp">
 
-        <!-- Logo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="ITQuiz"
+            android:text="ITQuiz 💻"
             android:textColor="#805477"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
 
-        <!-- Platform -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"
-            android:background="#F1E1ED"
-            android:padding="7dp"
-            android:text="IT QUIZ PLATFORM"
-            android:textColor="#805477"
-            android:textSize="11sp"
+            android:text="Bienvenue !"
+            android:textColor="#35243D"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
-        <!-- Welcome -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            android:text="Bon retour parmi nous !"
-            android:textColor="#332431"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:text="Prêt pour un nouveau défi ?"
-            android:textColor="#888088"
-            android:textSize="14sp" />
-
-        <!-- Information -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#F9EAF7"
-            android:padding="16dp"
-            android:text="⚡ Votre progression vous attend !&#10;Continuez à apprendre la programmation et les réseaux."
-            android:textColor="#65445F"
-            android:textSize="13sp" />
-
-        <!-- Email -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Adresse e-mail"
-            android:textColor="#332431"
-            android:textStyle="bold" />
+            android:text="Connecte-toi pour continuer"
+            android:textColor="#888888"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="35dp" />
 
         <EditText
-            android:id="@+id/edtLoginEmail"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#B58AA8"
-            android:hint="exemple@email.com"
+            android:layout_height="55dp"
+            android:hint="Adresse e-mail"
             android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:textSize="14sp" />
-
-        <!-- Password -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="Mot de passe"
-            android:textColor="#332431"
-            android:textStyle="bold" />
+            android:padding="15dp"
+            android:backgroundTint="#805477"
+            android:layout_marginBottom="18dp" />
 
         <EditText
-            android:id="@+id/edtLoginPassword"
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#B58AA8"
-            android:hint="Votre mot de passe"
+            android:layout_height="55dp"
+            android:hint="Mot de passe"
             android:inputType="textPassword"
-            android:padding="12dp"
-            android:textSize="14sp" />
+            android:padding="15dp"
+            android:backgroundTint="#805477"
+            android:layout_marginBottom="25dp" />
 
-        <!-- Forgot password -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="right"
-            android:text="Mot de passe oublié ?"
-            android:textColor="#805477"
-            android:textSize="12sp" />
-
-        <!-- Login Button -->
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#B17FA5"
-            android:text="Se connecter →"
-            android:textAllCaps="false"
+            android:text="Se connecter"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:backgroundTint="#805477" />
 
-        <!-- Information -->
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="#F9EAF7"
-            android:padding="15dp"
-            android:text="🎓 Votre espace étudiant est prêt !&#10;Suivez votre progression et développez vos compétences informatiques."
-            android:textColor="#65445F"
-            android:textSize="13sp" />
+            android:text="Vous n'avez pas de compte ?"
+            android:textColor="#777777"
+            android:layout_marginTop="25dp" />
 
-        <!-- Register -->
         <TextView
             android:id="@+id/txtGoToRegister"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            android:text="Vous n'avez pas de compte ? Inscrivez-vous"
+            android:text="Créer un compte"
             android:textColor="#805477"
-            android:textSize="13sp"
-            android:clickable="true"
-            android:focusable="true" />
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="10dp" />
 
     </LinearLayout>
 </ScrollView>
