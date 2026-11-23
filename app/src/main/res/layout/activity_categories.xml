@@ -1,0 +1,122 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Titre de la page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisissez une catégorie"
+            android:textColor="#302633"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Sous-titre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sélectionnez une catégorie et testez vos connaissances !"
+            android:textColor="#817582"
+            android:textSize="14sp" />
+
+        <!-- Catégorie Programmation -->
+        <TextView
+            android:id="@+id/cardProgramming"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:text="💻  Programmation"
+            android:textColor="#302633"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="3dp" />
+
+        <!-- Catégorie Bases de données -->
+        <TextView
+            android:id="@+id/cardDatabases"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:text="🗄️  Bases de données"
+            android:textColor="#302633"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="3dp" />
+
+        <!-- Catégorie Réseaux -->
+        <TextView
+            android:id="@+id/cardNetworking"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:text="🌐  Réseaux"
+            android:textColor="#302633"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="3dp" />
+
+        <!-- Catégorie Cybersécurité -->
+        <TextView
+            android:id="@+id/cardCybersecurity"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:text="🔐  Cybersécurité"
+            android:textColor="#302633"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="3dp" />
+
+        <!-- Catégorie Développement Web -->
+        <TextView
+            android:id="@+id/cardWebDevelopment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:text="💻  Développement Web"
+            android:textColor="#302633"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="3dp" />
+
+        <!-- Bouton Commencer le quiz -->
+        <Button
+            android:id="@+id/btnStartQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#B784A7"
+            android:text="Commencer le quiz"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
