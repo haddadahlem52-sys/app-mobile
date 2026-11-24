@@ -1,230 +1,353 @@
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFF7FB">
+    android:background="#FFF7FB"
+    android:fillViewport="true">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ITQuiz"
+                android:textColor="#35243D"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon profil 👤"
+                android:textColor="#805477"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Welcome -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bonjour ! 👋"
+            android:textColor="#35243D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="22dp"
+            android:text="Prêt à tester tes connaissances en informatique ?"
+            android:textColor="#777078"
+            android:textSize="15sp" />
+
+        <!-- Daily Challenge -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:background="#805477"
+            android:padding="20dp"
+            android:layout_marginBottom="25dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ITQuiz                         Mon profil"
-                android:textColor="#805477"
-                android:textSize="20sp"
+                android:text="⭐ DÉFI DU JOUR"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:text="Bonjour, étudiant !"
-                android:textColor="#332431"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Prêt à tester tes connaissances informatiques ?"
-                android:textColor="#888088"
-                android:textSize="13sp" />
-
-            <!-- Challenge -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:background="#805477"
-                android:orientation="vertical"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DEFI QUOTIDIEN"
-                    android:textColor="#F5D8EC"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Défi informatique : 10 questions"
-                    android:textColor="#FFFFFF"
-                    android:textSize="19sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Améliore tes connaissances en informatique et en réseaux."
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="15dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:text="Commencer le quiz"
-                    android:textAllCaps="false"
-                    android:textColor="#805477" />
-
-            </LinearLayout>
-
-            <!-- Categories -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="Explorer les catégories"
-                android:textColor="#332431"
+                android:layout_marginTop="10dp"
+                android:text="Relève le défi et améliore ton niveau !"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!-- Première ligne -->
-            <LinearLayout
+            <Button
+                android:id="@+id/btnQuiz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="105dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="⌨️&#10;&#10;Programmation&#10;15 quiz"
-                    android:textColor="#805477"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="105dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="6dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="▤&#10;&#10;Bases de données&#10;12 quiz"
-                    android:textColor="#805477"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <!-- Deuxième ligne -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="105dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="🌐&#10;&#10;Réseaux&#10;10 quiz"
-                    android:textColor="#805477"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="105dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="6dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="🛡️&#10;&#10;Cybersécurité&#10;14 quiz"
-                    android:textColor="#805477"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <!-- Troisième ligne -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="95dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="6dp"
-                    android:background="#FFFFFF"
-                    android:gravity="center"
-                    android:text="💻&#10;&#10;Développement Web&#10;16 quiz"
-                    android:textColor="#805477"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+                android:layout_marginTop="15dp"
+                android:text="Commencer le quiz"
+                android:textColor="#805477"
+                android:backgroundTint="#FFFFFF" />
 
         </LinearLayout>
-    </ScrollView>
 
-    <!-- Navigation en bas -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:orientation="horizontal">
-
+        <!-- Categories title -->
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="⌂&#10;Accueil"
-            android:textColor="#805477"
-            android:textSize="12sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Explorer les catégories"
+            android:textColor="#35243D"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="▦&#10;Catégories"
-            android:textColor="#888088"
-            android:textSize="12sp" />
+        <!-- Category 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💻"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Programmation"
+                    android:textColor="#35243D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 quiz disponibles"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Category 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗄️"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bases de données"
+                    android:textColor="#35243D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15 quiz disponibles"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Category 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌐"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Réseaux informatiques"
+                    android:textColor="#35243D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 quiz disponibles"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Category 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔐"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cybersécurité"
+                    android:textColor="#35243D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 quiz disponibles"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Category 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🖥️"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Développement Web"
+                    android:textColor="#35243D"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16 quiz disponibles"
+                    android:textColor="#888888"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Bottom navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:text="●&#10;Profil"
-            android:textColor="#888088"
-            android:textSize="12sp" />
+            android:padding="12dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="🏠 Accueil"
+                android:textColor="#805477"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="📚 Catégories"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="👤 Profil"
+                android:textColor="#777777"
+                android:textSize="13sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
