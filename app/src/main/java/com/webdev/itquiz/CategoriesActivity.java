@@ -1,6 +1,7 @@
 
 package com.webdev.itquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.graphics.Color;
 import android.widget.Button;
@@ -58,13 +59,22 @@ public class CategoriesActivity extends AppCompatActivity {
         startQuiz.setOnClickListener(v -> {
 
             if (selectedCategory.isEmpty()) {
+
                 Toast.makeText(this,
                         "Veuillez choisir une catégorie !",
                         Toast.LENGTH_SHORT).show();
+
             } else {
-                Toast.makeText(this,
-                        "Catégorie choisie : " + selectedCategory,
-                        Toast.LENGTH_SHORT).show();
+
+                // Ouvrir le quiz avec la catégorie sélectionnée
+                Intent intent = new Intent(
+                        CategoriesActivity.this,
+                        QuizActivity.class
+                );
+
+                intent.putExtra("category", selectedCategory);
+
+                startActivity(intent);
             }
         });
     }

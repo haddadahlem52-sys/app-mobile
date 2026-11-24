@@ -1,10 +1,10 @@
+
 package com.webdev.itquiz;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ public class Accueil extends AppCompatActivity {
 
     Button btnQuiz;
     TextView txtProfile;
+    String userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,22 +23,20 @@ public class Accueil extends AppCompatActivity {
         btnQuiz = findViewById(R.id.btnQuiz);
         txtProfile = findViewById(R.id.txtProfile);
 
-        // Action du bouton Commencer le quiz
+        // Récupérer l'email transmis depuis Connexion
+        userEmail = getIntent().getStringExtra("email");
+
+        // Ouvrir les catégories
         btnQuiz.setOnClickListener(v -> {
-            Toast.makeText(
-                    Accueil.this,
-                    "Bienvenue dans le quiz !",
-                    Toast.LENGTH_SHORT
-            ).show();
+            Intent intent = new Intent(Accueil.this, CategoriesActivity.class);
+            startActivity(intent);
         });
 
-        // Action Mon profil
+        // Ouvrir le profil
         txtProfile.setOnClickListener(v -> {
-            Toast.makeText(
-                    Accueil.this,
-                    "Page Profil",
-                    Toast.LENGTH_SHORT
-            ).show();
+            Intent intent = new Intent(Accueil.this, ProfileActivity.class);
+            intent.putExtra("email", userEmail);
+            startActivity(intent);
         });
     }
 }

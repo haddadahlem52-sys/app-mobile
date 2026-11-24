@@ -1,3 +1,4 @@
+
 package com.webdev.itquiz;
 
 import android.content.Intent;
@@ -20,13 +21,11 @@ public class Connexion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        // Liaison avec les éléments XML
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
         txtGoToRegister = findViewById(R.id.txtGoToRegister);
 
-        // Bouton Se connecter
         btnLogin.setOnClickListener(v -> {
 
             String email = edtEmail.getText().toString().trim();
@@ -45,17 +44,15 @@ public class Connexion extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Connexion.this, Accueil.class);
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
         });
 
-        // Aller vers la page Inscription
         txtGoToRegister.setOnClickListener(v -> {
-
             Intent intent = new Intent(Connexion.this, Signup.class);
             startActivity(intent);
-
         });
     }
 }

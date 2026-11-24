@@ -1,3 +1,4 @@
+
 package com.webdev.itquiz;
 
 import android.content.Intent;
@@ -35,7 +36,8 @@ public class Signup extends AppCompatActivity {
             String password = edtRegisterPassword.getText().toString().trim();
             String confirmPassword = edtConfirmPassword.getText().toString().trim();
 
-            if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            if (name.isEmpty() || email.isEmpty() ||
+                    password.isEmpty() || confirmPassword.isEmpty()) {
 
                 Toast.makeText(this,
                         "Veuillez remplir tous les champs",
@@ -62,13 +64,11 @@ public class Signup extends AppCompatActivity {
             } else {
 
                 Toast.makeText(this,
-                        "Compte prêt pour le backend",
+                        "Inscription validée ! Connectez-vous.",
                         Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(
-                        Signup.this,
-                        Signup.class
-                );
+                Intent intent = new Intent(Signup.this, Connexion.class);
+                intent.putExtra("email", email);
                 startActivity(intent);
                 finish();
             }
@@ -76,10 +76,7 @@ public class Signup extends AppCompatActivity {
 
         txtGoToLogin.setOnClickListener(v -> {
 
-            Intent intent = new Intent(
-                    Signup.this,
-                    Signup.class
-            );
+            Intent intent = new Intent(Signup.this, Connexion.class);
             startActivity(intent);
             finish();
         });
